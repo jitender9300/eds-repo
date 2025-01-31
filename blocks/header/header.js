@@ -146,6 +146,49 @@ export default async function decorate(block) {
     });
   }
 
+  // add functionality of nav tools 
+
+  // 1. Select the container (assuming it already exists in the DOM)
+const navTools = nav.querySelector('.nav-tools');
+
+// 2. Inject the HTML for a button and input
+navTools.innerHTML = `
+  <button 
+    class="search-btn" 
+    type="button" 
+    aria-label="Open search"
+  >
+    <span class="icon-search"></span>
+  </button>
+  <input 
+    type="text" 
+    class="search-input" 
+    placeholder="Search..."
+    aria-label="Search"
+  />
+`;
+
+const searchBtn = navTools.querySelector('.search-btn');
+console.log(searchBtn);
+const searchInput = navTools.querySelector('.search-input');
+searchBtn.addEventListener('click', () => {
+  searchInput.classList.toggle('active');
+  if (searchInput.classList.contains('active')) {
+    searchInput.focus();
+  } else {
+    searchInput.value = '';
+  }
+});
+
+document.addEventListener('click', (e) => {
+  if (!navTools.contains(e.target)) {
+    searchInput.classList.remove('active');
+    searchInput.value = '';
+  }
+});
+
+
+
   // hamburger for mobile
   const hamburger = document.createElement('div');
   hamburger.classList.add('nav-hamburger');
