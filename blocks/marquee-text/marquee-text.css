@@ -1,0 +1,54 @@
+.marquee-text.block {
+    width: 800px;
+    margin: auto;
+}
+
+.marquee-text p{
+    color:red;
+    font-weight: 900;
+}
+
+.marquee-text h1,
+.marquee-text h2,
+.marquee-text h3,
+.marquee-text h4,
+.marquee-text h5,
+.marquee-text h6{
+    color:red;
+    font-weight: bold;
+}
+
+.marquee-text.block>div>div {
+    text-align: center;
+}
+
+.marquee-text ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.marquee-text ul .marquee-wrapper {
+    display: flex;
+}
+
+.marquee-wrapper>marquee {
+    display: inline-block;
+    line-height: 1;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+}
+
+.marquee-text ul a:not(:last-child)::after {
+    content: "||";
+    margin-left: 10px;
+}
+
+.marquee-text .marquee-wrapper a:any-link {
+    color: #0000ee;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}

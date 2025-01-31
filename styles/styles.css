@@ -18,6 +18,7 @@
   --dark-color: #505050;
   --text-color: #131313;
   --text-white:#fff;
+  --text-dark-blue:#0000ee;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
@@ -250,6 +251,18 @@ main > .section:first-of-type {
   }
 }
 
+@media(width >=1101px) and (width <=1599px) {
+  main .section {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  main .section {
+    max-width: unset;
+    margin: auto;
+  }
+}
+
 @media (width >= 1600px) {
   main .section {
       max-width: unset;
@@ -269,4 +282,9 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+
+.section.margin-custom{
+  margin:40px 0;
 }

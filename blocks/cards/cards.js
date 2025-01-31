@@ -15,4 +15,18 @@ export default function decorate(block) {
   ul.querySelectorAll('picture > img').forEach((img) => img.closest('picture').replaceWith(createOptimizedPicture(img.src, img.alt, false, [{ width: '750' }])));
   block.textContent = '';
   block.append(ul);
+
+//if colored card is available
+  const listItems = block.querySelectorAll('.coloredcard li');
+  // If no <li> elements found, nothing to do
+  if (!listItems.length) return;
+
+  // Calculate how many degrees to move for each item
+  const hueStep = 360 / listItems.length;
+
+  listItems.forEach((li, index) => {
+    // Calculate a unique hue for each list item
+    const hue = Math.floor(index * hueStep);
+    li.style.backgroundColor = `hsl(${hue}, 70%, 50%)`;
+  });
 }
