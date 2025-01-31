@@ -13,9 +13,11 @@
 :root {
   /* colors */
   --background-color: white;
+  --background-grey:#1e272e;
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
+  --text-white:#fff;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
 
@@ -233,9 +235,9 @@ main > .section {
 }
 
 main > .section > div {
-  max-width: 1200px;
+
   margin: auto;
-  padding: 0 24px;
+
 }
 
 main > .section:first-of-type {
@@ -244,9 +246,22 @@ main > .section:first-of-type {
 
 @media (width >= 900px) {
   main > .section > div {
-    padding: 0 32px;
+
   }
 }
+
+@media (width >= 1600px) {
+  main .section {
+      max-width: unset;
+      margin: auto;
+  }
+
+  main .section {
+    padding-left: 9vw;
+    padding-right: 9vw;
+}
+}
+
 
 /* section metadata */
 main .section.light,
