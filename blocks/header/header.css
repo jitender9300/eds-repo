@@ -42,6 +42,9 @@ header nav[aria-expanded='true'] {
   header nav[aria-expanded='true'] {
     min-height: 0;
     overflow: visible;
+    background: #eef7f0;
+    color: #000000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
   }
 }
 
