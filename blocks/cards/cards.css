@@ -1,3 +1,12 @@
+.cards.sticky p:has(strong){
+  position: sticky;
+  top: 64px;
+  background: #363636;
+  color:#fff;
+  z-index: 100;
+  padding:20px;
+}
+
 .cards > ul {
   list-style: none;
   margin: 0;
@@ -22,12 +31,34 @@
   margin: 16px;
 }
 
+.cards .cards-card-body ul{
+  margin: 0;
+  line-height: 30px;
+}
+
 .cards .cards-card-body {
   margin: 16px;
 }
 
-.cards.strongparagraph p{
-  background:red;
+.cards .cards-card-body {
+  margin: 16px;
+}
+
+.cards.black-link .cards-card-body a:any-link {
+  color: #000000;
+}
+
+.cards.black-link .cards-card-body a:any-link:visited {
+  color: #333333;
+}
+
+.cards.black-link .cards-card-body a:any-link:hover {
+  color: #ff0000;
+}
+
+
+.cards.black-link .cards-card-body p.button-container a:any-link{
+  color:#fff;
 }
 
 .cards.no-margin .cards-card-body{ 
@@ -37,7 +68,6 @@
 .cards.no-margin .cards-card-body p{ 
   margin:0;
   text-align: center;
-  text-transform: uppercase;
 }
 
 .cards .cards-card-image {
@@ -64,4 +94,41 @@ text-transform: uppercase;
 /* for tabled-row class  */
 .section.tabled-row{
 
+}
+
+.cards p.button-container{
+  background-color: unset;
+}
+
+
+.cards p.button-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.cards  a.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #ffffff;
+  background: linear-gradient(135deg, #4A90E2, #007AFF);
+  border: none;
+  border-radius:unset;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.cards p .button:hover,
+.cards p .button:focus {
+  background: linear-gradient(135deg, #007AFF, #4A90E2);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cards p .button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
