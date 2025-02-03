@@ -36,6 +36,8 @@
 
 .cards.no-margin .cards-card-body p{ 
   margin:0;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .cards .cards-card-image {

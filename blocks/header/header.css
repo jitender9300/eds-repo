@@ -48,6 +48,13 @@ header nav[aria-expanded='true'] {
   }
 }
 
+@media (width >= 1101px) and (width <= 1599px) {
+  header nav {
+      padding-left: 5vw;
+      padding-right: 5vw;
+  }
+}
+
 @media (width >= 1600px) {
   header nav {
       padding-left: 9vw;
