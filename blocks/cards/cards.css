@@ -58,7 +58,8 @@
 
 
 .cards.black-link .cards-card-body p.button-container a:any-link{
-  color:#fff;
+  background: #ff0000;
+  color: #ffffff;
 }
 
 .cards.no-margin .cards-card-body{ 
